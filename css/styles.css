@@ -1,0 +1,56 @@
+:root {
+  --brand-dark-gray: #f0f0f0;
+  --brand-light-gray: #f6f6f6;
+  --brand-turquoise: #c5f5fa;
+  --brand-white: #fff;
+  --brand-black: #000;
+  --brand-red: #ff5b5a;
+  --container-width: 1170px;
+}
+
+.container {
+  max-width: var(--container-width);
+  margin: 0 auto;
+}
+
+body {
+  background-color: var(--brand-white);
+}
+
+.app-header {
+  background-color: var(--brand-light-gray);
+}
+
+.flex-it {
+  display: flex;
+  justify-content: space-between;
+}
+
+a:link,
+a:visited {
+  color: var(--brand-black);
+  text-decoration: none;
+}
+
+.account-nav li,
+.main-navigation li {
+  display: inline-block;
+}
+
+.account-nav ul,
+.main-navigation ul {
+  list-style: none;
+  padding: 0;
+}
+
+.logo {
+  width: 122px;
+}
+
+.app-body {
+  background-color: var(--brand-white);
+}
+
+.app-footer {
+  background-color: var(--brand-black);
+}
