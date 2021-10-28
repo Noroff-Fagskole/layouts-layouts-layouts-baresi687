@@ -12,6 +12,12 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="./css/styles.css" />
   </head>
   <body>
@@ -81,7 +87,12 @@
         <div class="row">
           <form class="search-form" action="#" method="post">
             <label for="search">Search</label>
-            <input type="search" id="search" name="search" />
+            <input
+              type="search"
+              id="search"
+              name="search"
+              placeholder="Search for products"
+            />
             <button type="submit">Submit</button>
           </form>
         </div>
@@ -89,9 +100,52 @@
     </header>
     <main class="app-body">
       <div class="container">
-        <nav class="bread-crumb">Bread Crumb</nav>
+        <nav class="bread-crumb">
+          <ol>
+            <li><a href="https://www.dustin.no">Home</a></li>
+            <li>
+              <a href="https://www.dustin.no/group/hardware">Produkter</a>
+            </li>
+            <li>
+              <a href="https://www.dustin.no/group/hardware/pc-nettbrett"
+                >PC &amp; nettbrett</a
+              >
+            </li>
+            <li>
+              <a
+                href="https://www.dustin.no/group/hardware/pc-nettbrett/barbare-datamaskiner"
+                >Bærbare datamaskiner</a
+              >
+            </li>
+            <li>
+              <a
+                href="https://www.dustin.no/group/hardware/pc-nettbrett/barbare-datamaskiner/apple"
+                >Apple</a
+              >
+            </li>
+            <li>Apple MacBook Pro (2021) Stellargrå</li>
+          </ol>
+        </nav>
 
-        <section class="product-container">Product Container</section>
+        <section class="product-container">
+          <div class="product flex-it">
+            <div class="column">
+              <img src="./img/image.jpg" alt="Product image" />
+            </div>
+            <div class="column">Product title, price</div>
+          </div>
+          <nav class="product-nav">
+            <ul>
+              <li><a href="#">Description</a></li>
+              <li><a href="#">Specification</a></li>
+              <li><a href="#">Reviews</a></li>
+            </ul>
+          </nav>
+          <div class="product-description flex-it">
+            <div class="column">Description left</div>
+            <div class="column">Description right</div>
+          </div>
+        </section>
       </div>
     </main>
 

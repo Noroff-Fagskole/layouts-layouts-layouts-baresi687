@@ -6,6 +6,9 @@
   --brand-black: #000;
   --brand-red: #ff5b5a;
   --container-width: 1170px;
+  --gutter: 20px;
+  --gutter-small: 10px;
+  --default-font-family: 'Open Sans', sans-serif;
 }
 
 .container {
@@ -15,15 +18,40 @@
 
 body {
   background-color: var(--brand-white);
+  font-family: var(--default-font-family);
 }
 
 .app-header {
   background-color: var(--brand-light-gray);
+  padding-top: var(--gutter);
+}
+
+.app-header .row:nth-child(1),
+.app-header .row:nth-child(2) {
+  padding-bottom: var(--gutter);
+}
+
+.app-header .row:nth-child(3) {
+  padding-bottom: var(--gutter-small);
+}
+
+.product.flex-it .column,
+.product-description.flex-it .column {
+  flex-basis: 50%;
 }
 
 .flex-it {
   display: flex;
   justify-content: space-between;
+  flex-direction: column;
+}
+
+.product-description .column {
+  min-height: 444px;
+}
+
+.product-description .column:nth-child(2) {
+  background-color: var(--brand-turquoise);
 }
 
 a:link,
@@ -33,12 +61,17 @@ a:visited {
 }
 
 .account-nav li,
-.main-navigation li {
+.main-navigation li,
+.bread-crumb li,
+.product-nav li {
   display: inline-block;
 }
 
 .account-nav ul,
-.main-navigation ul {
+.main-navigation ul,
+.bread-crumb-list ol,
+.bread-crumb ol,
+.product-nav ul {
   list-style: none;
   padding: 0;
 }
@@ -47,10 +80,59 @@ a:visited {
   width: 122px;
 }
 
+img {
+  width: 100%;
+}
+
 .app-body {
   background-color: var(--brand-white);
 }
 
+.bread-crumb {
+  padding: var(--gutter);
+}
+
+.bread-crumb li:after {
+  content: '>';
+  padding-right: var(--gutter-small);
+  padding-left: var(--gutter-small);
+}
+
+.bread-crumb li:last-child:after {
+  content: '';
+}
+
+.product .column:nth-child(2) {
+  background-color: yellow;
+}
+
 .app-footer {
   background-color: var(--brand-black);
+}
+
+.search-form {
+  position: relative;
+}
+
+.search-form label {
+  display: none;
+}
+
+.search-form input {
+  width: 100%;
+  padding: var(--gutter-small);
+  padding-left: 100px;
+  border: 1px solid var(--brand-light-gray);
+}
+
+.search-form button {
+  position: absolute;
+  top: var(--gutter-small);
+  left: var(--gutter-small);
+}
+
+@media screen and (min-width: 768px) {
+  .flex-it {
+    flex-direction: row;
+  }
 }
